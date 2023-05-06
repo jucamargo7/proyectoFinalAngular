@@ -1,0 +1,19 @@
+.contenidoGeneral{
+    height: 1000px;
+    display: grid;
+    grid-template-columns: 10% 90%;
+    grid-template-rows: 100%;
+    grid-template-areas: "manuLateral subcontenidoGeneral";
+    background-color: bisque;
+}
+
+.menuLateral{
+    background-color:thistle;
+}
+/* .subcontenidoGeneral{
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 50% 50%;
+    grid-template-areas: "formularioAlumno" "listAlumno"
+
+} */
