@@ -5,8 +5,9 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SharedModule } from './shared/shared.module';
 import { EstudiantesModule } from './estudiantes/estudiantes.module';
-import { RouterModule } from '@angular/router';
-
+import { RouterModule, Route } from '@angular/router';
+import { HttpClientModule} from '@angular/common/http';
+import { PersonaService } from './features/persona.service';
 
 @NgModule({
   declarations: [
@@ -18,9 +19,10 @@ import { RouterModule } from '@angular/router';
     AppRoutingModule,
     SharedModule,
     EstudiantesModule,
-    RouterModule
+    RouterModule,
+    HttpClientModule,
   ],
-  providers: [],
+  providers: [PersonaService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

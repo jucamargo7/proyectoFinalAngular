@@ -6,13 +6,17 @@ import { EstudiantesModule } from './estudiantes/estudiantes.module';
 import { ClasesModule } from './clases/clases.module';
 import { ClasesComponent } from './clases/clases/clases.component';
 import { ListAlumnosComponent } from './estudiantes/list-alumnos/list-alumnos.component';
-import { AbmAlumnosComponent } from './estudiantes/abm-alumnos/abm-alumnos.component';
+import { EditEstudiantesComponent } from './estudiantes/edit-estudiantes/edit-estudiantes.component';
+import { AgregAlumnosComponent } from './estudiantes/agreg-alumnos/agreg-alumnos.component';
+
+
 
 const routes: Routes = [
 {path: "cursos", component: CursosComponent},
 {path: "clases", component: ClasesComponent},
 {path: "estudiantes", component: ListAlumnosComponent},
-{path: "estudiantes", component: AbmAlumnosComponent},
+{path: "estudiantes/editar/:id", component: EditEstudiantesComponent},
+{path: "estudiantes/agregar", component: AgregAlumnosComponent},
 
 ];
 
@@ -20,8 +24,8 @@ const routes: Routes = [
   imports: [
     RouterModule.forRoot(routes),
     CursosModule,
-    EstudiantesModule,
     ClasesModule,
+    EstudiantesModule,
   ],
   exports: [RouterModule
   ]

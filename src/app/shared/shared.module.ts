@@ -2,6 +2,8 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ToolbarComponent } from './toolbar/toolbar.component';
 import { BarraLateralComponent } from './barra-lateral/barra-lateral.component';
+import { AppRoutingModule } from '../app-routing.module';
+import { RouterModule } from '@angular/router';
 
 
 
@@ -11,7 +13,9 @@ import { BarraLateralComponent } from './barra-lateral/barra-lateral.component';
     BarraLateralComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    AppRoutingModule,
+    RouterModule
   ],
   exports: [
     ToolbarComponent,

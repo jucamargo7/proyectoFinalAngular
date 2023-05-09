@@ -1,32 +1,30 @@
-import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
-import { Estudiantes } from 'src/app/core/estudiantes-lista';
+import { Component, OnInit} from '@angular/core';
+import { Persona } from 'src/app/core/persona';
+import { PersonaService } from 'src/app/features/persona.service';
+
 
 @Component({
   selector: 'app-list-alumnos',
   templateUrl: './list-alumnos.component.html',
   styleUrls: ['./list-alumnos.component.css']
 })
-export class ListAlumnosComponent implements OnInit {
-  estudiantes: Estudiantes [] = [
-    new Estudiantes(1, "Juan", "Camargo", "juanpablo9911@hotmailcom", false),
-    new Estudiantes(1, "Camilo", "Manjarrez", "camilo_m@hotmailcom", true),
-    new Estudiantes(1, "Daniel", "Alzate", "dani-alzate@hotmailcom", false),
-    new Estudiantes(1, "Javier", "Cardenas", "javicardenas@hotmailcom", true),
-  ];
-  displayedColumns = ["id", "nombre", "apellido", "correo", "estado"];
+export class ListAlumnosComponent implements OnInit{
+  personas: Persona[] | undefined;
 
-  public formularioRegistro: FormGroup | undefined;
-
-  constructor(private fb: FormBuilder) {}
+  constructor(private personaService: PersonaService){ }
 
   ngOnInit(): void {
-    this.formularioRegistro = this.fb.group({
-      nombreRegistro: [],
-      apellidoRegistro: [],
-      emailRegistro: [],
+    this.personaService.getAll().subscribe((data:Persona[]) =>{
+      this.personas = data;
     })
   }
-
+  borrar(id:number){
+    console.log("Borrando el " + id)
+  }
 }
+
+
+
+
+
 

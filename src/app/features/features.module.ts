@@ -14,7 +14,7 @@ import { MiDirectivaDirective } from './mi-directiva.directive';
   ],
   exports: [
     MatTableModule,
-    MiDirectivaDirective
+    MiDirectivaDirective,
   ],
 })
 export class FeaturesModule { }
