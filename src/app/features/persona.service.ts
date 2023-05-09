@@ -7,24 +7,24 @@ import { Observable } from 'rxjs/internal/Observable';
   providedIn: 'root'
 })
 export class PersonaService {
-  add(persona: Persona) {
-    throw new Error('Method not implemented.');
-  }
+  
   private url= "http://localhost:3000/estudiantes";
 
   constructor(private httpClient:HttpClient) { }
 
   getAll():Observable<Persona[]>{
   return this.httpClient.get<Persona[]>(this.url);
-
-}
+  }
   update(persona:Persona){
     return this.httpClient.put(this.url + "/" + persona.id, persona);
   }
   get(id:number):Observable<Persona>{
     return this.httpClient.get<Persona>(this.url + "/" + id );
   }
-  agregar(persona:Persona){
+  add(persona:Persona){ 
     return this.httpClient.post(this.url, persona);
+  }
+  delete(id:number){
+    return this.httpClient.delete(this.url + "/" + id);
   }
 }

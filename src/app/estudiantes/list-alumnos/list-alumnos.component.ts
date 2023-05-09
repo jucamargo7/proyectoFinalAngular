@@ -19,7 +19,12 @@ export class ListAlumnosComponent implements OnInit{
     })
   }
   borrar(id:number){
-    console.log("Borrando el " + id)
+    this.personaService.delete(id).subscribe((resp) =>{
+      this.personaService.getAll().subscribe((data:Persona[])=>{
+        this.personas=data;
+      })
+
+    })
   }
 }
 
