@@ -21,6 +21,7 @@ import { PersonaService } from './features/persona.service';
     EstudiantesModule,
     RouterModule,
     HttpClientModule,
+
   ],
   providers: [PersonaService],
   bootstrap: [AppComponent]

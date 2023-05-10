@@ -15,7 +15,7 @@ import { RouterModule } from '@angular/router';
   imports: [
     CommonModule,
     AppRoutingModule,
-    RouterModule
+    RouterModule,
   ],
   exports: [
     ToolbarComponent,

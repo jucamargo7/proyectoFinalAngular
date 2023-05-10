@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ClasesComponent } from './clases/clases.component';
+import { ClasesRoutingModule } from './clases-routing.module';
 
 
 
@@ -9,10 +10,8 @@ import { ClasesComponent } from './clases/clases.component';
     ClasesComponent
   ],
   imports: [
-    CommonModule
-  ],
-  exports: [
-    ClasesComponent
+    CommonModule,
+    ClasesRoutingModule
   ]
 })
-export class ClasesModule { }
+export class ClasesModuleModule { }
