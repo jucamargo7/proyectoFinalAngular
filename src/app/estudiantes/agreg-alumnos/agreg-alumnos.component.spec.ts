@@ -1,6 +1,8 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { AgregAlumnosComponent } from './agreg-alumnos.component';
+import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing'
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 describe('AgregAlumnosComponent', () => {
   let component: AgregAlumnosComponent;
@@ -8,7 +10,9 @@ describe('AgregAlumnosComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ AgregAlumnosComponent ]
+      declarations: [ AgregAlumnosComponent ],
+      imports: [HttpClientTestingModule, FormsModule, ReactiveFormsModule],
+
     })
     .compileComponents();
 

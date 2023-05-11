@@ -7,6 +7,7 @@ import { FeaturesModule } from '../features/features.module';
 import { RouterModule } from '@angular/router';
 import { EditEstudiantesComponent } from './edit-estudiantes/edit-estudiantes.component';
 import { AgregAlumnosComponent } from './agreg-alumnos/agreg-alumnos.component';
+import { PersonaService } from '../features/persona.service';
 
 
 @NgModule({
@@ -29,6 +30,9 @@ import { AgregAlumnosComponent } from './agreg-alumnos/agreg-alumnos.component';
     ReactiveFormsModule,
     EditEstudiantesComponent,
     AgregAlumnosComponent,
+  ],
+  providers:[
+    PersonaService
   ]
 })
 export class EstudiantesModule { }
