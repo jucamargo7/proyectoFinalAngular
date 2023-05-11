@@ -8,6 +8,7 @@ import { EstudiantesModule } from './estudiantes/estudiantes.module';
 import { RouterModule, Route } from '@angular/router';
 import { HttpClientModule} from '@angular/common/http';
 import { PersonaService } from './features/persona.service';
+import { CoreModule } from './core/core.module';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { PersonaService } from './features/persona.service';
     EstudiantesModule,
     RouterModule,
     HttpClientModule,
+    CoreModule
 
   ],
   providers: [PersonaService],
